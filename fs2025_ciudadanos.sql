@@ -17,8 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Base de datos: `fs2024_ciudadanos`
+
 CREATE DATABASE fs2025_ciudadanos;
 USE fs2025_ciudadanos;
 
@@ -2879,16 +2878,7 @@ CREATE TABLE `vw_deptos_regiones` (
 
 -- --------------------------------------------------------
 
---
--- Estructura para la vista `vw_deptos_regiones`
---
-DROP TABLE IF EXISTS `vw_deptos_regiones`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vw_deptos_regiones`  AS   (select `departamentos`.`cod_depto` AS `cod_depto`,`departamentos`.`nombre_depto` AS `nombre_depto`,`regiones`.`cod_region` AS `cod_region`,`regiones`.`nombre` AS `nombre` from (`departamentos` join `regiones` on(`departamentos`.`cod_region` = `regiones`.`cod_region`)))  ;
-
---
--- Índices para tablas volcadas
---
 
 --
 -- Indices de la tabla `ciudadanos`
